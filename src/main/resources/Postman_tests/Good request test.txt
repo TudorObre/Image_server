@@ -1,0 +1,9 @@
+http://localhost:8080/images/porsche.jpeg?size=3840x2160
+
+pm.test("Status code is 200", () => {
+  pm.response.to.have.status(200);
+});
+
+pm.test("returns image", () => {
+  pm.expect(pm.response.headers.get('Content-Type')).to.eql('image/jpeg');
+});

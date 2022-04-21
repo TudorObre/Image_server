@@ -1,0 +1,5 @@
+http://localhost:8080/images/adfskjvbaerkjhvvb.jpeg?size=3840x2160
+
+pm.test("Status code is 404", () => {
+  pm.response.to.have.status(404);
+});
